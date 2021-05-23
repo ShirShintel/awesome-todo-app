@@ -4,8 +4,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100%;
-    /* justify-content: center; */
+    min-height: 100vh;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: space-between;
 }
 
 
@@ -13,7 +15,14 @@ h1 {
     color: black;
     font-size: 40px;
     align-self: center;
-    margin-right: 150px;
+    margin-right: 250px;
     margin-top: 75px;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 

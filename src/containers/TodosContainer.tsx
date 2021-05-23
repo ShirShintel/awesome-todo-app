@@ -1,10 +1,18 @@
 import * as React from 'react';
-import styles from './App.module.css';
+import styles from './Container.module.css';
+import Todo from '../components/Todo';
+//import * as Image from '../utils/corgi.png';
 
-const TodosContainer: React.FC = () => {
+const TodosContainer: React.FC = (props) => {
+
+
+    const TodoList = React.useState([]);
+
+
     return (
         <div>
-            <img src="/Users/shirsh/Desktop/awesome-todo-app/awesome-todo-app/src/utils/corgi.png"></img>
+            {/* <img src={Image}/> */}
+            <p className={styles.imgText}> Todos you add will appear here</p>
         </div>
     );
 };

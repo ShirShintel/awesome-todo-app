@@ -63,7 +63,13 @@ const config: webpack.Configuration = {
                         loader: "html-loader"
                     }
                 ]
-            }
+            },
+            {
+                test:/\.(png|jpe?g|gif)$/i,
+                use:[
+                    'file-loader',
+                ],
+            },
         ],
     },
 
