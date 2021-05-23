@@ -1,7 +1,9 @@
-body {
+html,body {
     font-family: "PingFang SC",-apple-system,BlinkMacSystemFont,segoe ui,Roboto,helvetica neue,Arial,noto sans,
     sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji,sans-serif;
     padding-left: 36px;
     padding-right: 36px;
     background-color: #F6F9FB;
+    margin: 0;
+    height: 100%;
 }
