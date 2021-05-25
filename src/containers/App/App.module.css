@@ -14,15 +14,22 @@
 h1 {
     color: black;
     font-size: 40px;
-    align-self: center;
-    margin-right: 250px;
+    align-self: flex-start;
     margin-top: 75px;
 }
 
 .head {
+    width: 500px;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin: 0 auto;
     align-items: center;
+
+}
+
+@media (max-width: 600px) {
+    .head {
+        width: 100%;
+    }
 }
 

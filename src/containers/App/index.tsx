@@ -1,38 +1,48 @@
-// import * as React from 'react';
-// import styles from './App.module.css';
-// import AddButton from '../../components/AddButton';
-// import NewTodoButton from '../../components/NewTodoButton';
-// import TodosContainer from '../TodosContainer';
+import * as React from 'react';
+import { useState } from 'react';
+import styles from './App.module.css';
+import AddButton from '../../components/AddButton';
+import NewTodoButton from '../../components/NewTodoButton';
+import TodosContainer from '../TodosContainer';
 
 
-// const App: React.FC = () => {
+const App: React.FC = () => {
 
-//     const [isAddingTodo,setIsAdding] = React.useState(true);
+    const [isAddingTodo,setIsAdding] = useState(false);
 
-//     const newButtonHandler = () => {
-//         setIsAdding(true);
-//     }
+    const [todoList,setTodos] = useState<string[]>([]);
 
 
-//     const exitButtonHandler = () => {
-//         setIsAdding(false);
-//     }
+    const startAddingHandler = () => {
+        setIsAdding(true);
+    }
 
 
-//     if (isAddingTodo){
-//         return (<AddButton exitButtonHandler={exitButtonHandler}/>);
-//     }
-//     else{
-//     return (
-//         <div className={styles.root}>
-//             <div className={styles.head}>
-//             <h1>Todos</h1>
-//                 <TodosContainer/>
-//             </div>
-//             <NewTodoButton newButtonHandler={newButtonHandler} />
-//         </div>
-//     );
-//     }
-// };
+    const stopAddingHandler = () => {
+        setIsAdding(false);
+    }
 
-// export default App;
+    const addTodo = (todo:string) => {
+        const newList = [todo,...todoList];
+        setTodos(newList);
+        
+    }
+
+
+    if (isAddingTodo){
+        return (<AddButton stopAddingHandler={stopAddingHandler} addTodo={addTodo} />);
+    }
+    else{
+    return (
+        <div className={styles.root}>
+            <div className={styles.head}>
+                <h1>Todos</h1>
+                <TodosContainer todoList={todoList} />
+            </div>
+            <NewTodoButton startAddingHandler={startAddingHandler} />
+        </div>
+    );
+    }
+};
+
+export default App;

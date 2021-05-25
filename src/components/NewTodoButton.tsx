@@ -2,16 +2,15 @@ import * as React from 'react';
 import styles from './Components.module.css';
 
 
-const NewTodoButton: React.FC = () => {
+interface Props {
+    startAddingHandler: () => void;
+}
 
-
-    const clickHandler = () => {
-
-    }
+const NewTodoButton: React.FC<Props> = (props) => {
 
 
     return (
-        <button className={styles.newTodoButton} onClick={clickHandler}>+</button>
+        <button className={styles.newTodoButton} onClick={props.startAddingHandler}>+</button>
     );
 };
 

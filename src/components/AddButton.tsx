@@ -1,26 +1,39 @@
 import * as React from 'react';
+import { useState } from "react";
 import styles from './Components.module.css';
 import appStyles from '../containers/App/App.module.css';
 
 
-const AddButton: React.FC = (props) => {
+interface Props {
+    stopAddingHandler: () => void;
+    addTodo: (s:string) => void;
+};
 
-    // exitButtonHandler = props.exitButtonHandler;
+
+const AddButton: React.FC<Props> = (props) => {
+
+    const [todo,setTodo] = useState("");
+
+    const submitHandler = (e:React.FormEvent) => {
+        e.preventDefault();
+        props.addTodo(todo);
+        props.stopAddingHandler();
+    }
 
     return (
         <div>
             <div className={styles.head}>
             <h1 className= {appStyles.title}>Add Todo</h1>
-            <button className={styles.exitButton}>X</button>
+            <button className={styles.exitButton} onClick={props.stopAddingHandler}>X</button>
             </div>
-            <form className={styles.form}>
+            <form className={styles.form} onSubmit={submitHandler}>
                 <div className={styles.div}>
                 <label>
                     To-do
                     </label>
-                    <input type="text" placeholder= "What needs to be done?"></input>
+                    <input type="text" value={todo} onChange={e => setTodo(e.target.value)} placeholder= "What needs to be done?"></input>
                 </div>
-                <button className= {styles.doneButton}>Done</button>
+                <button type="submit" className= {todo?styles.doneButton:styles.disabled} disabled={!todo}>Done</button>
             </form>
         </div>
     );
