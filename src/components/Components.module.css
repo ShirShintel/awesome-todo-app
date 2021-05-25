@@ -1,0 +1,121 @@
+body {
+    margin:0;
+}
+
+
+.doneButton, .newTodoButton {
+    color: white;
+    background-color: rgba(10, 179, 231, 0.836);
+    border: 1px solid  rgba(178, 224, 238, 0.986);
+    box-shadow: 0 0 7px rgba(129, 201, 223, 0.836);
+    border-radius: 15px;
+    height: 55px;
+}
+
+.newTodoButton {
+    align-self: flex-end;
+    width: 55px;
+    margin-bottom: 20px;
+    font-size: larger;
+}
+
+.doneButton {
+    align-self: bottom;
+    width: 100%;
+    margin-bottom: 1%;
+    
+}
+
+.disabled {
+    height: 55px;
+}
+
+.exitButton {
+    border: none;
+    align-self: top;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    justify-content:space-between;
+}
+
+.div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+input {
+    padding: 10px;
+    border-color: transparent;
+    box-shadow: 0 0 5px silver;
+    margin-top: 2%;
+    transition: ease-in-out, box-shadow .3s ease-in-out;
+}
+
+input:hover {
+    outline: 1px solid rgb(10, 179, 231);
+    box-shadow: none;
+}
+
+input:focus {
+    outline: 1px solid rgb(10, 179, 231);
+    box-shadow: 0 0 5px rgba(129, 201, 223, 0.836);
+}
+
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    opacity: 80%;
+    align-self:center ;
+    margin: 10% auto;
+}
+
+
+h2, p {
+    margin-left: 30px;
+}
+
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* margin: 0 auto; */
+    align-self: flex-start;
+    border-left: 0;
+    padding: 0;
+    align-items: flex-start;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+    
+}
+
+.todo {
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 10%;
+    font-size: small;
+    /* min-width: 350px; */
+    width: 100%;
+    box-shadow: 0 0 5px silver;
+    height: auto;
+    
+}
