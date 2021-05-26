@@ -1,7 +1,12 @@
 import * as React from 'react';
 import { useState } from "react";
+import { connect } from 'react-redux';
 import styles from './Components.module.css';
 import appStyles from '../containers/App/App.module.css';
+import {Dispatch} from '../types';
+import styles from './Components.module.css';
+import appStyles from '../containers/App/App.module.css';
+
 
 
 interface Props {
@@ -39,4 +44,16 @@ const AddButton: React.FC<Props> = (props) => {
     );
 };
 
-export default AddButton;
+
+
+
+
+const mapDispatchToProps = (dispatch: Dispatch) => {
+    return {
+        stopAddingHandler: () => dispatch({type:"HIDE"}),
+        addTodo: (value:string) => dispatch({type:"ADD", value:value})
+    }
+};
+
+export default connect(null,mapDispatchToProps)(AddButton);
+

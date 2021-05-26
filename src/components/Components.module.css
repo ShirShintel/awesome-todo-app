@@ -63,8 +63,8 @@ input {
     border-color: transparent;
     box-shadow: 0 0 5px silver;
     margin-top: 2%;
-    transition: ease-in-out, box-shadow .3s ease-in-out;
-}
+    transition: ease-in-out, box-shadow .3s;
+
 
 input:hover {
     outline: 1px solid rgb(10, 179, 231);
@@ -73,7 +73,8 @@ input:hover {
 
 input:focus {
     outline: 1px solid rgb(10, 179, 231);
-    box-shadow: 0 0 5px rgba(129, 201, 223, 0.836);
+    box-shadow: 0 0 5px rgba(3, 75, 97, 0.836);
+
 }
 
 
@@ -111,7 +112,7 @@ ul{
 .todo {
     border-radius: 5px;
     background-color: white;
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: small;
     /* min-width: 350px; */
     width: 100%;
@@ -119,3 +120,8 @@ ul{
     height: auto;
     
 }
+
+li {
+    list-style-type: none;
+}
+
