@@ -4,8 +4,6 @@ import styles from './Components.module.css';
 import {Dispatch} from '../types';
 
 
-
-
 interface Props {
     startAddingHandler: () => void;
 }

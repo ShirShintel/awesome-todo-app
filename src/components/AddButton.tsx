@@ -6,12 +6,10 @@ import styles from './Components.module.css';
 import appStyles from '../containers/App/App.module.css';
 
 
-
 interface Props {
     stopAddingHandler: () => void;
     addTodo: (s:string) => void;
 };
-
 
 const AddButton: React.FC<Props> = (props) => {
 
@@ -41,9 +39,6 @@ const AddButton: React.FC<Props> = (props) => {
         </div>
     );
 };
-
-
-
 
 
 const mapDispatchToProps = (dispatch: Dispatch) => {

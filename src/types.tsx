@@ -13,11 +13,13 @@ export interface ReducerState {
 export interface Action {
     type: string
     value?: string
+    key?: number
   } 
 
 export type TodoType = {
-    text: string,
-    key: number
+    text: string
+    id: number
+    deleted: boolean
 }
 
 export type Dispatch = typeof store.dispatch; 
