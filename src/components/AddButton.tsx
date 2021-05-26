@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { useState } from "react";
 import { connect } from 'react-redux';
-import styles from './Components.module.css';
-import appStyles from '../containers/App/App.module.css';
 import {Dispatch} from '../types';
 import styles from './Components.module.css';
 import appStyles from '../containers/App/App.module.css';
