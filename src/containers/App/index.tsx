@@ -1,48 +1,46 @@
-import * as React from 'react';
-import { useState } from 'react';
-import styles from './App.module.css';
-import AddButton from '../../components/AddButton';
-import NewTodoButton from '../../components/NewTodoButton';
-import TodosContainer from '../TodosContainer';
+import * as React from "react";
+import styles from "./App.module.css";
+import AddButton from "../../components/AddButton";
+import NewTodoButton from "../../components/NewTodoButton";
+import TodosContainer from "../TodosContainer";
+import { connect } from "react-redux";
+import { State } from '../../types';
 
 
-const App: React.FC = () => {
-
-    const [isAddingTodo,setIsAdding] = useState(false);
-
-    const [todoList,setTodos] = useState<string[]>([]);
+interface Props {
+    isAddingTodo: boolean
+}
 
 
-    const startAddingHandler = () => {
-        setIsAdding(true);
-    }
+const App: React.FC<Props> = (props) => {
 
-
-    const stopAddingHandler = () => {
-        setIsAdding(false);
-    }
-
-    const addTodo = (todo:string) => {
-        const newList = [todo,...todoList];
-        setTodos(newList);
-        
-    }
-
-
-    if (isAddingTodo){
-        return (<AddButton stopAddingHandler={stopAddingHandler} addTodo={addTodo} />);
-    }
-    else{
+  if (props.isAddingTodo) {
+    return (
+        <AddButton/>
+    );
+  } else {
     return (
         <div className={styles.root}>
             <div className={styles.head}>
-                <h1>Todos</h1>
-                <TodosContainer todoList={todoList} />
+            <h1>Todos</h1>
+            <TodosContainer />
             </div>
-            <NewTodoButton startAddingHandler={startAddingHandler} />
+            <NewTodoButton />
         </div>
     );
-    }
+  }
 };
 
-export default App;
+
+const mapStateToProps = (state:State) => {
+    console.log(state);
+    return {
+       isAddingTodo: state.isAddingTodo.isAddingTodo
+     };
+};
+
+
+
+
+export default connect(mapStateToProps)(App);
+
