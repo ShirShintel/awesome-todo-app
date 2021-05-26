@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styles from './Components.module.css';
 import {State,Dispatch} from '../types';
 import { AppDispatch } from '../store';
+import styles from './Components.module.css';
 
 
 

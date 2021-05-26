@@ -3,9 +3,12 @@ import { connect } from 'react-redux'
 import styles from './Container.module.css';
 import Todo from '../components/Todo';
 import {State, TodoType} from '../types';
-
+import styles from './Container.module.css';
+import Todo from '../components/Todo';
+        
 interface Props {
     todoList:TodoType[];
+
 };
 
 const TodosContainer: React.FC<Props> = (props) => {
