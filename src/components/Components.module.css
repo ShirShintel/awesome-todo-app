@@ -129,16 +129,6 @@ li {
     flex-direction: column;
 }
 
-/* ### Images ### */
-
-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    opacity: 80%;
-    align-self:center ;
-    margin: 10% auto;
-}
 
 /* ### Text ### */
 

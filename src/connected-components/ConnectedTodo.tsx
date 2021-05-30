@@ -11,7 +11,6 @@ const mapDispatchToProps = (dispatch:Dispatch) => {
 }
 
 const mapStateToProps = (state:State, ownProps: TodoOwnProps) => {
-    console.log(state)
     return {
         todo: state.todoList.todoList.find((item) => item.id===ownProps.id)
     }
