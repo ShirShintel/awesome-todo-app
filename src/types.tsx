@@ -19,7 +19,7 @@ export interface Action {
 export type TodoType = {
     text: string
     id: number
-    deleted: boolean
+    checked: boolean
 }
 
 export type Dispatch = typeof store.dispatch; 

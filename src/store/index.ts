@@ -3,7 +3,7 @@ import { Action, ReducerState } from '../types';
 
 const initialState:ReducerState = {
   isAddingTodo: false,
-  todoList: []
+  todoList: [{text:"hi",id:1,checked:false}]
 }
 
 const todoListReducer=(state:ReducerState = initialState,action:Action) => {
@@ -14,14 +14,15 @@ const todoListReducer=(state:ReducerState = initialState,action:Action) => {
         newState.todoList.unshift({
           text: action.value,
           id: Math.random(),
-          deleted: false
+          checked: false
           });
         return newState; 
       }
-    // case "DELETE":
-    //   if (action.key){
-    //     newState.todoList = newState.todoList.filter()
-    //   }
+    case "DELETE":
+      if (action.key){
+        newState.todoList = newState.todoList.filter(todo => todo.id!==action.key)
+        return newState;
+      }
     default:
       return state;
   }

@@ -128,17 +128,32 @@ li {
     flex-direction: column;
 }
 
+
+.todoButtons {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
 .deleteButton {
-    border: 1px solid rgba(163, 161, 161, 0.76);
-    border-radius: 50%;
     width: 20px;
     height: 20px;
-    background-color: rgba(164, 215, 235, 0.623);
     color: slategray;
-    align-self: flex-end;
-    margin-top: 3px;
-    margin-right: 3px;
-    text-align: center;
+    background-color: white;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: 5px; 
     padding: 0px;
+}
+
+
+.checkBox {
+    /* align-self: flex-end; */
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    margin-top: 5px;
+    margin-right: 5px;
+
 }
 
