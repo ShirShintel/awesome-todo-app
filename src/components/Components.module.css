@@ -2,7 +2,7 @@ body {
     margin:0;
 }
 
-
+/* ### Buttons ###*/
 .doneButton, .newTodoButton {
     color: white;
     background-color: rgba(10, 179, 231, 0.836);
@@ -38,11 +38,47 @@ body {
     background-color: transparent;
 }
 
-.form {
+.deleteButton, .checkedDeleteButton {
+    width: 20px;
+    height: 20px;
+    color: slategray;
+    background-color: white;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: 5px; 
+    padding: 0px;
+    transition: ease-in-out, color, border-color .3s;
+}
+
+
+.deleteButton:hover, .checkedDeleteButton:hover {
+    font-weight: bold;
+    color: rgba(10, 179, 231, 0.836);
+}
+
+
+.checkBox, .checkedCheckBox{
+    align-self: right;
+    width: 15px;
+    height: 15px;
+    border-radius: 10%;
+    padding: 0px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: rgba(208, 234, 241, 0.986);
+    border: 1px solid rgb(173, 172, 172);
+}
+
+.checkedCheckBox, .checkedDeleteButton {
+    background-color: rgb(233, 230, 230);
+}
+
+
+/* ### Containers ### */
+.todoDiv {
     display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-    justify-content:space-between;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .div {
@@ -56,6 +92,72 @@ body {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-self: flex-start;
+    border-left: 0;
+    padding: 0;
+    align-items: flex-start;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+}
+
+.todo, .checkedTodo {
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 5%;
+    font-size: small;
+    width: 100%;
+    box-shadow: 0 0 5px silver;
+    height: auto;    
+}
+
+.checkedTodo {
+    background-color: rgb(233, 230, 230); 
+    color: gray
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ### Images ### */
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    opacity: 80%;
+    align-self:center ;
+    margin: 10% auto;
+}
+
+/* ### Text ### */
+
+h2, p {
+    margin-left: 30px;
+}
+
+.checkedText {
+    text-decoration: line-through;
+}
+
+
+/* ### Form ### */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    justify-content:space-between;
 }
 
 input {
@@ -78,81 +180,11 @@ input:focus {
     box-shadow: 0 0 5px rgba(3, 75, 97, 0.836);
 }
 
-
-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    opacity: 80%;
-    align-self:center ;
-    margin: 10% auto;
-}
-
-
-h2, p {
-    margin-left: 30px;
-}
-
-
-ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    /* margin: 0 auto; */
-    align-self: flex-start;
-    border-left: 0;
-    padding: 0;
-    align-items: flex-start;
-    margin-top: 0;
+/* ### Other ### */
+hr {
     width: 100%;
-    height: auto;
-    margin-right: auto;
-    
-}
-
-.todo {
-    border-radius: 5px;
-    background-color: white;
-    margin-top: 5%;
-    font-size: small;
-    /* min-width: 350px; */
-    width: 100%;
-    box-shadow: 0 0 5px silver;
-    height: auto;
-    
-}
-
-li {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
+    border: 1px solid black;
 }
 
 
-.todoButtons {
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-.deleteButton {
-    width: 20px;
-    height: 20px;
-    color: slategray;
-    background-color: white;
-    border-color: transparent;
-    margin-top: 5px;
-    margin-left: 5px; 
-    padding: 0px;
-}
-
-
-.checkBox {
-    /* align-self: flex-end; */
-    width: 20px;
-    height: 20px;
-    padding: 0px;
-    margin-top: 5px;
-    margin-right: 5px;
-}
 
