@@ -13,8 +13,6 @@ interface TodoOwnProps {
     id: number;
 }
 
-
-
 const Todo: React.FC<TodoProps> = (props) => {
     if (!props.todo) {
         return <div></div>;
