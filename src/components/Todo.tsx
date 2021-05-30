@@ -1,17 +1,7 @@
 import * as React from 'react';
 import styles from './Components.module.css';
-import { TodoType, State, Dispatch } from '../types';
-import { connect } from 'react-redux';
+import { TodoProps } from '../types';
 
-
-interface TodoProps {
-    todo?: TodoType;
-    deleteTodo: (id:number) => void;
-}
-
-interface TodoOwnProps {
-    id: number;
-}
 
 const Todo: React.FC<TodoProps> = (props) => {
     if (!props.todo) {
@@ -19,10 +9,6 @@ const Todo: React.FC<TodoProps> = (props) => {
     }
 
     const {id, text, checked} = props.todo;
-
-    // const deleteHandler = () => {
-    //     props.deleteTodo(id);
-    // }
 
     return (
         <li key={id} className={styles.todo}>
@@ -35,19 +21,4 @@ const Todo: React.FC<TodoProps> = (props) => {
     );
 };
 
-
-const mapDispatchToProps = (dispatch:Dispatch) => {
-    return {
-       deleteTodo: (id:number) => dispatch({type:"DELETE", key:id})
-    }
-}
-
-const mapStateToProps = (state:State, ownProps: TodoOwnProps) => {
-    return {
-        todo: state.todoList.todoList.find((item) => item.id===ownProps.id)
-    }
-};
-
-const ConnectedTodo = connect(mapStateToProps, mapDispatchToProps)(Todo);
-
-export default ConnectedTodo;
+export default Todo;
