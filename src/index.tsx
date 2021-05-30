@@ -3,12 +3,12 @@ import { Provider } from 'react-redux';
 import ReactDOM from 'react-dom';
 
 import store from './store';
-import App from "./containers/App";
+import ConnectedApp from './connected-containers/ConnectedApp';
 import './index.css';
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <ConnectedApp />
     </Provider>,
     document.getElementById('root')
 );

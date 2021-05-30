@@ -1,17 +1,11 @@
 import * as React from 'react';
 import { useState } from "react";
-import { connect } from 'react-redux';
-import {Dispatch} from '../types';
 import styles from './Components.module.css';
 import appStyles from '../containers/App/App.module.css';
+import { AddButtonProps } from '../types';
 
 
-interface Props {
-    stopAddingHandler: () => void;
-    addTodo: (s:string) => void;
-};
-
-const AddButton: React.FC<Props> = (props) => {
+const AddButton: React.FC<AddButtonProps> = (props) => {
 
     const [todo,setTodo] = useState("");
 
@@ -40,13 +34,5 @@ const AddButton: React.FC<Props> = (props) => {
     );
 };
 
-
-const mapDispatchToProps = (dispatch: Dispatch) => {
-    return {
-        stopAddingHandler: () => dispatch({type:"HIDE"}),
-        addTodo: (value:string) => dispatch({type:"ADD", value:value})
-    }
-};
-
-export default connect(null,mapDispatchToProps)(AddButton);
+export default AddButton;
 

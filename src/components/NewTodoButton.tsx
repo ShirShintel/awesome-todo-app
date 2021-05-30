@@ -1,22 +1,12 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
 import styles from './Components.module.css';
-import {Dispatch} from '../types';
+import { NewTodoButtonProps } from '../types';
 
 
-interface Props {
-    startAddingHandler: () => void;
-}
-
-const NewTodoButton: React.FC<Props> = (props) => {
+const NewTodoButton: React.FC<NewTodoButtonProps> = (props) => {
     return (
         <button className={styles.newTodoButton} onClick={()=>props.startAddingHandler()}>+</button>
     );
 };
 
-
-const mapDispatchToProps = (dispatch:Dispatch) => {
-    return {startAddingHandler : () => dispatch({type:"SHOW"})}
-};
-
-export default connect(null,mapDispatchToProps)(NewTodoButton);
+export default NewTodoButton;
