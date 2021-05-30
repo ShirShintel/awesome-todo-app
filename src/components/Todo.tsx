@@ -1,11 +1,12 @@
 import * as React from 'react';
 import styles from './Components.module.css';
-import { TodoType, State } from '../types';
+import { TodoType, State, Dispatch } from '../types';
 import { connect } from 'react-redux';
+
 
 interface TodoProps {
     todo?: TodoType;
-    // deleteTodo: (id:number) => void;
+    deleteTodo: (id:number) => void;
 }
 
 interface TodoOwnProps {
@@ -19,7 +20,7 @@ const Todo: React.FC<TodoProps> = (props) => {
         return <div></div>;
     }
 
-    const {id, text, deleted} = props.todo;
+    const {id, text, checked} = props.todo;
 
     // const deleteHandler = () => {
     //     props.deleteTodo(id);
@@ -27,24 +28,28 @@ const Todo: React.FC<TodoProps> = (props) => {
 
     return (
         <li key={id} className={styles.todo}>
-            <button className={styles.deleteButton} >X</button>
+            <div className={styles.todoButtons}>
+                <button className={styles.deleteButton} onClick={()=>props.deleteTodo(id)}>X</button>
+                {/* <button className={styles.checkBox}></button> */}
+            </div>
             <h2>{text}</h2>
         </li>
     );
 };
 
 
-// const mapDispatchToProps = (dispatch:Dispatch) => {
-//     return {
-//        deleteTodo: (id:number) => dispatch({type:"DELETE", key:id})
-//     }
-// }
+const mapDispatchToProps = (dispatch:Dispatch) => {
+    return {
+       deleteTodo: (id:number) => dispatch({type:"DELETE", key:id})
+    }
+}
+
 const mapStateToProps = (state:State, ownProps: TodoOwnProps) => {
     return {
         todo: state.todoList.todoList.find((item) => item.id===ownProps.id)
     }
 };
 
-const ConnectedTodo = connect(mapStateToProps)(Todo);
+const ConnectedTodo = connect(mapStateToProps, mapDispatchToProps)(Todo);
 
 export default ConnectedTodo;

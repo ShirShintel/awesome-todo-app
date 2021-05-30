@@ -16,7 +16,6 @@ const TodosContainer: React.FC<Props> = (props) => {
     console.log(todoList);
     
 
-
     if (todoList.length>0){
         return <ul>{todoList.map(todo =>
         <ConnectedTodo id={todo.id} />)}</ul>;
