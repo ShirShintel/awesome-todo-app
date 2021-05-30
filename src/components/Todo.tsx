@@ -1,9 +1,7 @@
 import * as React from 'react';
 import styles from './Components.module.css';
-
 import { TodoType, State, Dispatch } from '../types';
 import { connect } from 'react-redux';
-
 
 interface TodoProps {
     todo?: TodoType;
@@ -21,6 +19,17 @@ const Todo: React.FC<TodoProps> = (props) => {
     }
 
     const {id, text, deleted} = props.todo;
+
+    // const deleteHandler = () => {
+    //     props.deleteTodo(id);
+    // }
+
+const Todo: React.FC<TodoProps> = (props) => {
+    if (!props.todo) {
+        return <div></div>;
+    }
+
+    const {id, text, checked} = props.todo;
 
     // const deleteHandler = () => {
     //     props.deleteTodo(id);
@@ -61,7 +70,7 @@ const mapStateToProps = (state:State, ownProps: TodoOwnProps) => {
     }
 };
 
-const ConnectedTodo = connect(mapStateToProps, mapDispatchToProps)(Todo);
 
+const ConnectedTodo = connect(mapStateToProps, mapDispatchToProps)(Todo);
 
 export default ConnectedTodo;
