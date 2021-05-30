@@ -22,6 +22,7 @@ export interface NewTodoButtonProps {
 export interface TodoProps {
     todo?: TodoType;
     deleteTodo: (id:number) => void;
+    toggleChecked: (id:number) => void;
 }
 
 export interface AppProps {
@@ -29,7 +30,7 @@ export interface AppProps {
 }
 
 export interface TodosContainerProps {
-    todoList:TodoType[];
+    todoList:TodoType[]
 };
 
 export interface TodoOwnProps {
@@ -40,12 +41,12 @@ export interface TodoOwnProps {
 
 export interface State {
     isAddingTodo: ReducerState,
-    todoList: ReducerState
+    todoList: ReducerState,
 }
 
 export interface ReducerState {
     isAddingTodo: boolean,
-    todoList: TodoType[] 
+    todoList: TodoType[],
 }
 
 export interface Action {

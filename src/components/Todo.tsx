@@ -9,13 +9,16 @@ const Todo: React.FC<TodoProps> = (props) => {
     }
 
     const {id, text, checked} = props.todo;
+    const checkmark = <span>&#10003;</span>
+
 
     return (
-        <li key={id} className={styles.todo}>
-            <div className={styles.todoButtons}>
-                <button className={styles.deleteButton} onClick={()=>props.deleteTodo(id)}>X</button>
+        <li key={id} className={checked?styles.checkedTodo:styles.todo}>
+            <div className={styles.todoDiv}>
+                <button className={checked?styles.checkedDeleteButton:styles.deleteButton} onClick={()=>props.deleteTodo(id)}>X</button>
+                <button className={checked?styles.checkedCheckBox:styles.checkBox} onClick={()=>props.toggleChecked(id)}>{checked?checkmark:""}</button>
             </div>
-            <h2>{text}</h2>
+            <h2 className={checked?styles.checkedText:""}>{text}</h2>
         </li>
     );
 };

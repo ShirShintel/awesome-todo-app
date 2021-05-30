@@ -5,7 +5,8 @@ import Todo from '../components/Todo';
 
 const mapDispatchToProps = (dispatch:Dispatch) => {
     return {
-       deleteTodo: (id:number) => dispatch({type:"DELETE", key:id})
+       deleteTodo: (id:number) => dispatch({type:"DELETE", key:id}),
+       toggleChecked: (id:number) => dispatch({type:"CHECK", key:id}),
     }
 }
 
