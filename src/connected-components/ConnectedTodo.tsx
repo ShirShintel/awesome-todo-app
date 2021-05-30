@@ -1,10 +1,6 @@
-import { State, Dispatch } from '../types';
+import { State, Dispatch, TodoOwnProps } from '../types';
 import { connect } from 'react-redux';
 import Todo from '../components/Todo';
-
-interface TodoOwnProps {
-    id: number;
-}
 
 
 const mapDispatchToProps = (dispatch:Dispatch) => {

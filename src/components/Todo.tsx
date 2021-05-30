@@ -14,7 +14,6 @@ const Todo: React.FC<TodoProps> = (props) => {
         <li key={id} className={styles.todo}>
             <div className={styles.todoButtons}>
                 <button className={styles.deleteButton} onClick={()=>props.deleteTodo(id)}>X</button>
-                {/* <button className={styles.checkBox}></button> */}
             </div>
             <h2>{text}</h2>
         </li>

@@ -3,7 +3,6 @@ import { State } from '../types';
 import App from '../containers/App/index'
 
 
-
 const mapStateToProps = (state:State) => {
     console.log(state);
     return {
