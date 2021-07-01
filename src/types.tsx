@@ -6,6 +6,16 @@ export type TodoType = {
     checked: boolean
 }
 
+export interface ReducerState {
+    isAddingTodo: boolean,
+    todoList: TodoType[],
+}
+
+export interface State {
+    isAddingTodo: ReducerState,
+    todoList: ReducerState,
+}
+
 //### Props ###
 
 

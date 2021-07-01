@@ -1,4 +1,5 @@
-import { State, Dispatch, TodoOwnProps } from './types';
+import { Dispatch, TodoOwnProps } from './types';
+import { State } from '../../types';
 import { connect } from 'react-redux';
 import Todo from '../pure/Todo';
 
