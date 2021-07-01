@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
-import { rootReducer }from './reducers';
+import { RootReducer }from './reducers/index';
 
-const store = createStore(rootReducer);
+const store = createStore(RootReducer);
 
 export type AppDispatch = typeof store.dispatch;
 
