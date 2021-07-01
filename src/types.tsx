@@ -28,9 +28,7 @@ export interface AppProps {
     isAddingTodo: boolean
 }
 
-export interface TodosContainerProps {
-    todoList:TodoType[]
-};
+
 
 
 

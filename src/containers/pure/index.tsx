@@ -12,17 +12,18 @@ const App: React.FC<AppProps> = (props) => {
     return (
         <ConnectedAddButton/>
     );
+
   } else {
     return (
-        <div className={styles.root}>
-            <div className={styles.head}>
-            <h1>Todos</h1>
-            <ConnectedTodosContainer />
+        <div className = {styles.root}>
+            <div className = {styles.head}>
+              <h1>Todos</h1>
+              <ConnectedTodosContainer />
             </div>
             <ConnectedNewTodoButton />
         </div>
     );
-  }
+  };
 };
 
 export default App;
