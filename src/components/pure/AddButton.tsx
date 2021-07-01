@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from "react";
 import { AddButtonProps } from './types';
 import styles from './Components.module.css';
-import appStyles from '../containers/App/App.module.css';
+import appStyles from '../../containers/pure/App.module.css';
 
 
 

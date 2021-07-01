@@ -1,4 +1,3 @@
-//### General Types ###
 
 export type TodoType = {
     text: string
@@ -15,28 +14,6 @@ export interface State {
     isAddingTodo: ReducerState,
     todoList: ReducerState,
 }
-
-//### Props ###
-
-
-
-
-
-
-
-export interface AppProps {
-    isAddingTodo: boolean
-}
-
-
-
-
-
-//### Connected Types ###
-
-
-
-
 
 export interface Action {
     type: string

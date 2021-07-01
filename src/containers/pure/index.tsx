@@ -1,9 +1,9 @@
 import * as React from "react";
-import styles from "./App.module.css";
+import { AppProps } from './types';
 import ConnectedAddButton from "../../components/connected/ConnectedAddButton";
 import ConnectedNewTodoButton from "../../components/connected/ConnectedNewTodoButton";
 import ConnectedTodosContainer from "../connected/ConnectedTodosContainer";
-import { AppProps } from '../../types';
+import styles from "./App.module.css";
 
 
 const App: React.FC<AppProps> = (props) => {
