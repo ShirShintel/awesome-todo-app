@@ -1,7 +1,7 @@
 import { ReducerState, Action } from "../../types";
 import { initialState } from "../initialState";
 
-
+// Nir: Action creator using Any Action
 export const TodoListReducer = (state: ReducerState = initialState, action: Action) => {
     let newState = {...state};
     switch(action.type){

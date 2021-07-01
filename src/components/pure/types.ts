@@ -1,5 +1,6 @@
 import { TodoType } from "../../types";
 
+// Nir: I think Show and Hide is more readable than Start and Stop
 export interface AddButtonProps {
     stopAddingHandler: () => void;
     addTodo: (s:string) => void;

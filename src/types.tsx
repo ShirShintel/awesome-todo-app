@@ -5,6 +5,7 @@ export type TodoType = {
     checked: boolean
 }
 
+// Nir: not sure if it is reducer state, maybe TodoListState
 export interface ReducerState {
     isAddingTodo: boolean,
     todoList: TodoType[],

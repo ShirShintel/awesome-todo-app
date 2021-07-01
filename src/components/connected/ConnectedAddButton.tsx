@@ -10,6 +10,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     };
 };
 
+// Nir: I would remove the 'Connected' from the name of the component
 const ConnectedAddButton = connect(null, mapDispatchToProps)(AddButton);
 
 export default ConnectedAddButton;

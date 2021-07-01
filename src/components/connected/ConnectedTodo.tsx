@@ -16,7 +16,7 @@ const mapStateToProps = (state: State, ownProps: TodoOwnProps) => {
         todo: state.todoList.todoList.find((item) => item.id === ownProps.id)
     };
 };
-
+// Nir: I would remove the 'Connected' from the name of the component
 const ConnectedTodo = connect(mapStateToProps, mapDispatchToProps)(Todo);
 
 export default ConnectedTodo;
