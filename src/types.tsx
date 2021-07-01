@@ -1,5 +1,3 @@
-import store  from './store'
-
 //### General Types ###
 
 export type TodoType = {
@@ -33,21 +31,13 @@ export interface TodosContainerProps {
     todoList:TodoType[]
 };
 
-export interface TodoOwnProps {
-    id: number;
-}
+
 
 //### Connected Types ###
 
-export interface State {
-    isAddingTodo: ReducerState,
-    todoList: ReducerState,
-}
 
-export interface ReducerState {
-    isAddingTodo: boolean,
-    todoList: TodoType[],
-}
+
+
 
 export interface Action {
     type: string
@@ -55,4 +45,3 @@ export interface Action {
     key?: number
 }
 
-export type Dispatch = typeof store.dispatch; 
