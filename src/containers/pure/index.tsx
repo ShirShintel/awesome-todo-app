@@ -1,8 +1,8 @@
 import * as React from "react";
 import styles from "./App.module.css";
-import ConnectedAddButton from "../../connected-components/ConnectedAddButton";
-import ConnectedNewTodoButton from "../../connected-components/ConnectedNewTodoButton";
-import ConnectedTodosContainer from "../../connected-containers/ConnectedTodosContainer";
+import ConnectedAddButton from "../../components/connected/ConnectedAddButton";
+import ConnectedNewTodoButton from "../../components/connected/ConnectedNewTodoButton";
+import ConnectedTodosContainer from "../connected/ConnectedTodosContainer";
 import { AppProps } from '../../types';
 
 

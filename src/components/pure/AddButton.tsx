@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from "react";
 import styles from './Components.module.css';
 import appStyles from '../containers/App/App.module.css';
-import { AddButtonProps } from '../types';
+import { AddButtonProps } from '../../types';
 
 
 const AddButton: React.FC<AddButtonProps> = (props) => {

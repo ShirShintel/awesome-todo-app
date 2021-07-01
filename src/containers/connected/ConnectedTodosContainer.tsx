@@ -1,7 +1,6 @@
-import { State, Dispatch } from '../types';
+import { State } from '../types';
 import { connect } from 'react-redux';
 import TodosContainer from '../containers/TodosContainer';
-import { stat } from 'fs';
 
 
 const mapStateToProps = (state:State) => {
