@@ -11,7 +11,7 @@ const Todo: React.FC<TodoProps> = (props) => {
 
     const {id, text, checked} = props.todo;
     const checkmark = <span> &#10003; </span>;
-
+    // Nir: There is type of input "checkbox" where you can set everything 
 
     return (
         <li key = {id} className = {checked ? styles.checkedTodo : styles.todo}>

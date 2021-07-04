@@ -21,6 +21,7 @@ export const TodoListReducer = (state: ReducerState = initialState, action: Acti
         };
       case "CHECK":
         if (action.key){
+          // Nir: use const instead of let
           let toBeChecked = newState.todoList.find(todo => todo.id === action.key)
           newState.todoList = newState.todoList.filter(todo => todo.id !== action.key)
           if(toBeChecked){
