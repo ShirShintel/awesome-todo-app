@@ -5,7 +5,7 @@ import styles from './Components.module.css';
 import appStyles from '../../containers/pure/App.module.css';
 
 // Nir: The name "AddButton" is a little bit confusing, because I would expect it to be just a button,
-// but it is the the fprm itself.
+// but it is the the form itself.
 const AddButton: React.FC<AddButtonProps> = (props) => {
 
     const [todo,setTodo] = useState("");
