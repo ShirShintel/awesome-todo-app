@@ -5,7 +5,7 @@ import ConnectedNewTodoButton from "../../components/connected/ConnectedNewTodoB
 import ConnectedTodosContainer from "../connected/ConnectedTodosContainer";
 import styles from "./App.module.css";
 
-
+// Nir: maybe import connected components as different name, and not as connected
 const App: React.FC<AppProps> = (props) => {
 
   if (props.isAddingTodo) {

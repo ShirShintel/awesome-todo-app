@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { Dispatch } from './types';
 import  AddButton  from '../pure/AddButton';
 
-
+// Nir: Action creator using Any Action
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         stopAddingHandler: () => dispatch({type: "HIDE"}),
