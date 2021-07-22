@@ -136,32 +136,7 @@ h2, p {
 
 /* ### Form ### */
 
-.form {
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-    justify-content:space-between;
-}
 
-input {
-    padding: 10px;
-    border-color: transparent;
-    box-shadow: 0 0 5px silver;
-    margin-top: 2%;
-    transition: ease-in-out, box-shadow .3s;
-}
-
-
-input:hover {
-    outline: 1px solid rgb(10, 179, 231);
-    box-shadow: none;
-}
-
-
-input:focus {
-    outline: 1px solid rgb(10, 179, 231);
-    box-shadow: 0 0 5px rgba(3, 75, 97, 0.836);
-}
 
 /* ### Other ### */
 hr {

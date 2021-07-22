@@ -1,0 +1,55 @@
+.head {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    justify-content:space-between;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+input {
+    padding: 10px;
+    border-color: transparent;
+    box-shadow: 0 0 5px silver;
+    margin-top: 2%;
+    transition: ease-in-out, box-shadow .3s;
+}
+
+
+input:hover {
+    outline: 1px solid rgb(10, 179, 231);
+    box-shadow: none;
+}
+
+
+input:focus {
+    outline: 1px solid rgb(10, 179, 231);
+    box-shadow: 0 0 5px rgba(3, 75, 97, 0.836);
+}
+
+.doneButton {
+    color: white;
+    background-color: rgba(10, 179, 231, 0.836);
+    border: 1px solid  rgba(178, 224, 238, 0.986);
+    box-shadow: 0 0 7px rgba(129, 201, 223, 0.836);
+    border-radius: 15px;
+    height: 55px;
+    align-self: bottom;
+    width: 100%;
+    margin-bottom: 1%;   
+}
+
+.disabled {
+    height: 55px;
+}

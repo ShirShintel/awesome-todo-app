@@ -4,8 +4,7 @@ import { useState } from "react";
 import { AddButtonProps } from '../types';
 import { ExitButton } from '../exitButton/ExitButton';
 
-import styles from './Components.module.css';
-import appStyles from '../../containers/pure/App.module.css';
+import styles from 'AddTodoView.module.css';
 
 
 export const AddTodoView: React.FC<AddButtonProps> = (props) => {
@@ -21,7 +20,7 @@ export const AddTodoView: React.FC<AddButtonProps> = (props) => {
     return (
         <div>
             <div className = {styles.head}>
-                <h1 className = {appStyles.title}>
+                <h1 className = {styles.title}>
                     Add Todo
                 </h1>
                 <ExitButton onClick = {props.stopAddingHandler}/>
@@ -29,7 +28,7 @@ export const AddTodoView: React.FC<AddButtonProps> = (props) => {
             <form 
                 className = {styles.form} 
                 onSubmit = {submitHandler}>
-                <div className = {styles.div}>
+                <div className = {styles.inputSection}>
                     <label>
                         To-do
                     </label>
