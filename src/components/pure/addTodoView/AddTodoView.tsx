@@ -1,11 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import * as React from 'react';
 import { useState } from "react";
-import { AddButtonProps } from '../types';
+
 import { ExitButton } from '../exitButton/ExitButton';
 
 import styles from 'AddTodoView.module.css';
 
+interface AddButtonProps {
+    stopAddingHandler: () => void;
+    addTodo: (s: string) => void;
+};
 
 export const AddTodoView: React.FC<AddButtonProps> = (props) => {
 
