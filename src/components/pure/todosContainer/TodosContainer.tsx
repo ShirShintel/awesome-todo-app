@@ -1,8 +1,15 @@
 import * as React from 'react';
-import { TodosContainerProps } from '../typesContainer';
+
 import ConnectedTodo from '../../connected/ConnectedTodo';
 import styles from './Container.module.css';
 
+export interface TodosContainerProps {
+    todoList: {
+        text: string;
+        id: number;
+        checked: boolean;
+        }[];
+};
   
 const TodosContainer: React.FC<TodosContainerProps> = (props) => {
 
@@ -44,7 +51,7 @@ const TodosContainer: React.FC<TodosContainerProps> = (props) => {
     else{
         return (
             <div>
-                <img src={imgSrc}/>
+                <img src={imgSrc} alt=""/>
                 <p className={styles.imgText}>
                      Todos you add will appear here
                 </p>
