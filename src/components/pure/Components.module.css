@@ -30,13 +30,6 @@ body {
     height: 55px;
 }
 
-.exitButton {
-    border: none;
-    align-self: top;
-    width: auto;
-    height: auto;
-    background-color: transparent;
-}
 
 .deleteButton, .checkedDeleteButton {
     width: 20px;
