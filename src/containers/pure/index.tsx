@@ -1,6 +1,6 @@
 import * as React from "react";
 import { AppProps } from './types';
-import ConnectedAddButton from "../../components/connected/ConnectedAddButton";
+import ConnectedAddButton from "../../components/connected/ConnectedAddTodoView";
 import ConnectedNewTodoButton from "../../components/connected/ConnectedNewTodoButton";
 import ConnectedTodosContainer from "../connected/ConnectedTodosContainer";
 import styles from "./App.module.css";
