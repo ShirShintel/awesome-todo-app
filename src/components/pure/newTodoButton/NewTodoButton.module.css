@@ -1,0 +1,12 @@
+.newTodoButton {
+    color: white;
+    background-color: rgba(10, 179, 231, 0.836);
+    border: 1px solid  rgba(178, 224, 238, 0.986);
+    box-shadow: 0 0 7px rgba(129, 201, 223, 0.836);
+    border-radius: 15px;
+    height: 55px;
+    align-self: flex-end;
+    width: 55px;
+    margin-bottom: 20px;
+    font-size: larger;
+}

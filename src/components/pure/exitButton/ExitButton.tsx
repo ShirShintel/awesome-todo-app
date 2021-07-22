@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "ExitButton.module.css";
+import styles from "./ExitButton.module.css";
 
 interface ExitButtonProps {
     onClick: () => void;

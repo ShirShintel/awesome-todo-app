@@ -1,7 +1,7 @@
 import { Dispatch, TodoOwnProps } from './types';
 import { State } from '../../types';
 import { connect } from 'react-redux';
-import Todo from '../pure/Todo';
+import { Todo } from '../pure/todoComponent/Todo';
 
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
@@ -12,8 +12,18 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
 };
 
 const mapStateToProps = (state: State, ownProps: TodoOwnProps) => {
+    const todo = state.todoList.todoList.find(item => item.id === ownProps.id);
+    if (!todo) {
+        return {
+            text: "",
+            id: 1,
+            checked: false
+        };
+    };
     return {
-        todo: state.todoList.todoList.find((item) => item.id === ownProps.id)
+        text: todo?.text,
+        id: todo?.id,
+        checked: todo?.checked,
     };
 };
 

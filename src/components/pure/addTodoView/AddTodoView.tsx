@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { ExitButton } from '../exitButton/ExitButton';
 
-import styles from 'AddTodoView.module.css';
+import styles from './AddTodoView.module.css';
 
 interface AddButtonProps {
     stopAddingHandler: () => void;

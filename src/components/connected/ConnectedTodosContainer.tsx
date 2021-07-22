@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { State } from '../../types';
-import TodosContainer from '../pure/todosContainer/TodosContainer';
+import { TodosContainer } from '../pure/todosContainer/TodosContainer';
 
 
 const mapStateToProps = (state: State) => {
@@ -9,6 +9,4 @@ const mapStateToProps = (state: State) => {
     };
 };
 
-const ConnectedTodosContainer = connect(mapStateToProps)(TodosContainer);
-
-export default ConnectedTodosContainer;
+export const ConnectedTodosContainer = connect(mapStateToProps)(TodosContainer);

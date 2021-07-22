@@ -1,22 +1,22 @@
 import * as React from "react";
 
-import ConnectedAddButton from "../../connected/ConnectedAddTodoView";
+import { ConnectedAddTodoView } from "../connected/ConnectedAddTodoView";
 
-import { TodosView } from "../todosView/todosView";
+import { TodosView } from "../pure/todosView/todosView";
 
 import { connect } from "react-redux";
-import { State } from "../../../types";
+import { State } from "../../types";
 
 interface AppProps {
   AddingTodoView: boolean;
 }
 
 const App: React.FC<AppProps> = props => 
-  props.AddingTodoView?<ConnectedAddButton/>:<TodosView/>;
+  props.AddingTodoView?<ConnectedAddTodoView/>:<TodosView/>;
 
 const mapStateToProps = (state: State) => {
     return {
-       isAddingTodo: state.isAddingTodo.isAddingTodo
+      AddingTodoView: state.isAddingTodo.isAddingTodo
      };
 };
 

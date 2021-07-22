@@ -1,9 +1,10 @@
 import React from 'react';
 import ConnectedNewTodoButton from '../../connected/ConnectedNewTodoButton';
 
-import ConnectedTodosContainer from '../todosContainer/TodosContainer';
+import { ConnectedTodosContainer } from '../../connected/ConnectedTodosContainer';
 
 import styles from './TodosView.module.css';
+
 
 export const TodosView: React.FC = () => 
     <div className={styles.root}>

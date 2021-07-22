@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import ConnectedTodo from '../../connected/ConnectedTodo';
-import styles from './Container.module.css';
+import styles from './TodosContainer.module.css';
 
 export interface TodosContainerProps {
     todoList: {
@@ -11,7 +11,7 @@ export interface TodosContainerProps {
         }[];
 };
   
-const TodosContainer: React.FC<TodosContainerProps> = (props) => {
+export const TodosContainer: React.FC<TodosContainerProps> = (props) => {
 
     const imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEEG2x3hiFfopMlhCs9f50VX8WQpZvCGe7_g&usqp=CAU";
     const checkedList = props.todoList.filter(todo => todo.checked);
@@ -59,5 +59,3 @@ const TodosContainer: React.FC<TodosContainerProps> = (props) => {
         );
     }
 };
-
-export default TodosContainer;

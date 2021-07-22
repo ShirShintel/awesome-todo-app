@@ -1,17 +1,21 @@
 
 export interface ReducerState {
-    isAddingTodo: boolean,
-    todoList: TodoType[],
+    isAddingTodo: boolean;
+    todoList: {
+        text: string;
+        id: number;
+        checked: boolean;
+        }[];
 }
 
 export interface State {
-    isAddingTodo: ReducerState,
-    todoList: ReducerState,
+    isAddingTodo: ReducerState;
+    todoList: ReducerState;
 }
 
 export interface Action {
-    type: string
-    value?: string
-    key?: number
+    type: string;
+    value?: string;
+    key?: number;
 }
 

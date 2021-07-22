@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './Components.module.css';
+import styles from './NewTodoButton.module.css';
 
 interface NewTodoButtonProps {
     startAddingHandler: () => void;

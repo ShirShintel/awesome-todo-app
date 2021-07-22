@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import styles from './Components.module.css';
+import styles from './TodoComponent.module.css';
 
 export interface TodoProps {
     text: string;
