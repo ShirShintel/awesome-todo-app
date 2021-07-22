@@ -4,6 +4,7 @@ import ConnectedAddButton from "../../components/connected/ConnectedAddTodoView"
 import ConnectedNewTodoButton from "../../components/connected/ConnectedNewTodoButton";
 import ConnectedTodosContainer from "../connected/ConnectedTodosContainer";
 import styles from "./App.module.css";
+import { connect } from "react-redux";
 
 
 const App: React.FC<AppProps> = (props) => {
@@ -26,5 +27,14 @@ const App: React.FC<AppProps> = (props) => {
   };
 };
 
-export default App;
+const mapStateToProps = (state: State) => {
+    return {
+       isAddingTodo: state.isAddingTodo.isAddingTodo
+     };
+};
+
+const ConnectedApp = connect(mapStateToProps)(App);
+
+export default ConnectedApp;
+
 
