@@ -1,31 +1,18 @@
 import * as React from "react";
-import { AppProps } from '../typesContainer';
+
 import ConnectedAddButton from "../../connected/ConnectedAddTodoView";
-import ConnectedNewTodoButton from "../../connected/ConnectedNewTodoButton";
-import ConnectedTodosContainer from "../../connected/ConnectedTodosContainer";
-import styles from "./App.module.css";
+
+import { TodosView } from "../todosView/todosView";
+
 import { connect } from "react-redux";
+import { State } from "../../../types";
 
+interface AppProps {
+  AddingTodoView: boolean;
+}
 
-const App: React.FC<AppProps> = (props) => {
-
-  if (props.isAddingTodo) {
-    return (
-        <ConnectedAddButton/>
-    );
-
-  } else {
-    return (
-        <div className = {styles.root}>
-            <div className = {styles.head}>
-              <h1>Todos</h1>
-              <ConnectedTodosContainer />
-            </div>
-            <ConnectedNewTodoButton />
-        </div>
-    );
-  };
-};
+const App: React.FC<AppProps> = props => 
+  props.AddingTodoView?<ConnectedAddButton/>:<TodosView/>;
 
 const mapStateToProps = (state: State) => {
     return {

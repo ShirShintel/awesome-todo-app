@@ -6,6 +6,6 @@ export interface NewTodoButtonProps {
 
 export interface TodoProps {
     todo?: TodoType;
-    deleteTodo: (id:number) => void;
-    toggleChecked: (id:number) => void;
+    deleteTodo: (id: number) => void;
+    toggleChecked: (id: number) => void;
 }

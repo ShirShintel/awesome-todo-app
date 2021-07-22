@@ -1,0 +1,25 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: auto;
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+.head {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+
+}
+
+@media (max-width: 600px) {
+    .head {
+        width: 100%;
+    }
+}
+

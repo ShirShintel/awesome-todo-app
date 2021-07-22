@@ -1,56 +1,15 @@
-import * as React from 'react';
-import { TodosContainerProps } from '../typesContainer';
-import ConnectedTodo from '../../connected/ConnectedTodo';
-import styles from './Container.module.css';
+import React from 'react';
+import ConnectedNewTodoButton from '../../connected/ConnectedNewTodoButton';
 
-  
-const TodosContainer: React.FC<TodosContainerProps> = (props) => {
+import ConnectedTodosContainer from '../todosContainer/TodosContainer';
 
-    const imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEEG2x3hiFfopMlhCs9f50VX8WQpZvCGe7_g&usqp=CAU";
-    const checkedList = props.todoList.filter(todo => todo.checked);
+import styles from './TodosView.module.css';
 
-    const checkedListComp = 
-        <React.Fragment>
-            <hr />
-            <ul>
-                {checkedList.map(todo =><ConnectedTodo id={todo.id} />)}
-            </ul>
-        </React.Fragment>;
-
-    const todoList = props.todoList.filter(todo => !todo.checked);
-
-    const todoListComp = 
-        <ul>{
-            todoList.map(todo =><ConnectedTodo id={todo.id} />)}
-        </ul>;
-    
-
-    if (todoList.length>0 && checkedList.length > 0){
-        return (
-            <React.Fragment>
-                {todoListComp}
-                {checkedListComp}
-            </React.Fragment>);
-    }
-    
-    else if (todoList.length > 0){
-        return todoListComp;
-    }
-
-    else if (checkedList.length > 0){
-        return checkedListComp;
-    }
-    
-    else{
-        return (
-            <div>
-                <img src={imgSrc}/>
-                <p className={styles.imgText}>
-                     Todos you add will appear here
-                </p>
-            </div>
-        );
-    }
-};
-
-export default TodosContainer;
+export const TodosView: React.FC = () => 
+    <div className={styles.root}>
+        <div className={styles.head}>
+            <h1>Todos</h1>
+            <ConnectedTodosContainer />
+        </div>
+        <ConnectedNewTodoButton />
+    </div>;
