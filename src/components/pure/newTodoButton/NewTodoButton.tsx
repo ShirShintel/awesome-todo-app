@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { NewTodoButtonProps } from '../types';
+
 import styles from './Components.module.css';
 
-
+interface NewTodoButtonProps {
+    startAddingHandler: () => void;
+}
 
 const NewTodoButton: React.FC<NewTodoButtonProps> = (props) => {
     return (

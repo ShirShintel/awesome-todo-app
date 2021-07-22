@@ -1,25 +1,32 @@
 import * as React from 'react';
-import { TodoProps } from './types';
+
 import styles from './Components.module.css';
 
+export interface TodoProps {
+    text: string;
+    id: number;
+    checked: boolean;
+    deleteTodo: (id: number) => void;
+    toggleChecked: (id: number) => void;
+}
 
+export const Todo: React.FC<TodoProps> = (props) => {
 
-const Todo: React.FC<TodoProps> = (props) => {
-    if (!props.todo) {
-        return <div />;
-    };
-
-    const {id, text, checked} = props.todo;
+    const {id, text, checked} = props;
     const checkmark = <span> &#10003; </span>;
 
-
     return (
-        <li key = {id} className = {checked ? styles.checkedTodo : styles.todo}>
+        <li key = {id} 
+        className = {checked ? styles.checkedTodo : styles.todo}>
             <div className = {styles.todoDiv}>
-                <button className = {checked ? styles.checkedDeleteButton : styles.deleteButton} onClick = {() => props.deleteTodo(id)}>
+                <button 
+                className = {checked ? styles.checkedDeleteButton : styles.deleteButton} 
+                onClick = {() => props.deleteTodo(id)}>
                     X
                 </button>
-                <button className = {checked ? styles.checkedCheckBox : styles.checkBox} onClick = {() => props.toggleChecked(id)}>
+                <button 
+                className = {checked ? styles.checkedCheckBox : styles.checkBox} 
+                onClick = {() => props.toggleChecked(id)}>
                     {checked?checkmark:""}
                 </button>
             </div>
@@ -29,5 +36,3 @@ const Todo: React.FC<TodoProps> = (props) => {
         </li>
     );
 };
-
-export default Todo;

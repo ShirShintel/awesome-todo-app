@@ -1,0 +1,68 @@
+.deleteButton, .checkedDeleteButton {
+    width: 20px;
+    height: 20px;
+    color: slategray;
+    background-color: white;
+    border-color: transparent;
+    margin-top: 5px;
+    margin-left: 5px; 
+    padding: 0px;
+    transition: ease-in-out, color, border-color .3s;
+}
+
+.deleteButton:hover, .checkedDeleteButton:hover {
+    font-weight: bold;
+    color: rgba(10, 179, 231, 0.836);
+}
+
+.checkBox, .checkedCheckBox{
+    align-self: right;
+    width: 15px;
+    height: 15px;
+    border-radius: 10%;
+    padding: 0px;
+    margin-top: 5px;
+    margin-right: 5px;
+    background-color: rgba(208, 234, 241, 0.986);
+    border: 1px solid rgb(173, 172, 172);
+}
+
+.checkedCheckBox, .checkedDeleteButton {
+    background-color: rgb(233, 230, 230);
+}
+
+.todoDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo, .checkedTodo {
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 5%;
+    font-size: small;
+    width: 100%;
+    box-shadow: 0 0 5px silver;
+    height: auto;    
+}
+
+.checkedTodo {
+    background-color: rgb(233, 230, 230); 
+    color: gray
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+
+h2 {
+    margin-left: 30px;
+}
+
+.checkedText {
+    text-decoration: line-through;
+}
