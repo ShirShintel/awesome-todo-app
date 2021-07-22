@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import * as React from 'react';
 import { useState } from "react";
 import { AddButtonProps } from '../types';
@@ -11,7 +12,7 @@ export const AddTodoView: React.FC<AddButtonProps> = (props) => {
 
     const [input,setCurrentInput] = useState("");
 
-    const submitHandler = (e:React.FormEvent) => {
+    const submitHandler = (e: React.FormEvent): void => {
         e.preventDefault();
         props.addTodo(input);
         props.stopAddingHandler();
