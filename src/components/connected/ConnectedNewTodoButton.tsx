@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { Dispatch } from './types';
-import NewTodoButton from '../pure/NewTodoButton'
+import NewTodoButton from '../pure/newTodoButton/NewTodoButton'
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {

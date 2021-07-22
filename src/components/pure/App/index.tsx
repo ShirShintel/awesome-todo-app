@@ -1,8 +1,8 @@
 import * as React from "react";
-import { AppProps } from './typesContainer';
-import ConnectedAddButton from "../../components/connected/ConnectedAddTodoView";
-import ConnectedNewTodoButton from "../../components/connected/ConnectedNewTodoButton";
-import ConnectedTodosContainer from "../connected/ConnectedTodosContainer";
+import { AppProps } from '../typesContainer';
+import ConnectedAddButton from "../../connected/ConnectedAddTodoView";
+import ConnectedNewTodoButton from "../../connected/ConnectedNewTodoButton";
+import ConnectedTodosContainer from "../../connected/ConnectedTodosContainer";
 import styles from "./App.module.css";
 import { connect } from "react-redux";
 

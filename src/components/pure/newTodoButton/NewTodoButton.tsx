@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { NewTodoButtonProps } from './types';
+import { NewTodoButtonProps } from '../types';
 import styles from './Components.module.css';
 
 

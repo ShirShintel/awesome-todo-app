@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { State } from '../../types';
-import TodosContainer from '../pure/TodosContainer';
+import TodosContainer from '../pure/todosView/TodosContainer';
 
 
 const mapStateToProps = (state: State) => {
