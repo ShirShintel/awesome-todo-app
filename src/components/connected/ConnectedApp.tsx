@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { State } from '../../types';
-import App from '../pure/index';
+import App from '../../containers/pure/index';
 
 
 const mapStateToProps = (state: State) => {

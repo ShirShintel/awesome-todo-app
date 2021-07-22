@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { TodosContainerProps } from './types';
+import { TodosContainerProps } from './typesContainer';
 import ConnectedTodo from '../../components/connected/ConnectedTodo';
 import styles from './Container.module.css';
 
